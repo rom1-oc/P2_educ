@@ -1,0 +1,114 @@
+Indicators pre-selection :
+
+03. Secondary
+
+- Enrolment in upper secondary education, both sexes (number) (USED)
+
+- Proportion of upper secondary schools with access to Internet for pedagogical purposes (%) (NO DATA)
+
+04. Vocational & Post-secondary Non-Tertiary
+
+- Enrolment in post-secondary non-tertiary education, both sexes (number) (USED) 
+
+05. Tertiary
+
+- Enrolment in tertiary education, all programmes, both sexes (number) (USED)
+
+06. Teachers
+
+- Percentage of qualified teachers in upper secondary education, both sexes (%)
+- Proportion of teachers with the minimum required qualifications in upper secondary education, both sexes (%)
+- Pupil-qualified teacher ratio in upper secondary (headcount basis)
+- Pupil-trained teacher ratio in upper secondary education (headcount basis) 
+
+07. Expenditures
+
+- Expenditure on education as % of total government expenditure (%)
+- Government expenditure on education as % of GDP (%) (USED)
+- Government expenditure on post-secondary non-tertiary education as % of GDP (%)
+- Government expenditure on tertiary education as % of GDP (%)
+- Government expenditure on upper secondary education as a percentage of GDP (%)
+
+10. Attainment
+
+Barro-Lee: Percentage of population age 15-19 with secondary schooling. Incompleted Secondary (NO DATA)
+Barro-Lee: Percentage of population age 25-29 with tertiary schooling. Incompleted Tertiary (NO DATA)
+
+11. Technology Skills
+
+- Proportion of youth and adults who have found, downloaded, installed and configured software, both sexes (%) (NO DATA)
+
+12. Population
+
+- Population growth (annual %) (USED)
+- Population, ages 15-24, total (USED)
+
+- School age population, post-secondary non-tertiary education, both sexes (number) (NO DATA)
+- School age population, tertiary education, both sexes (number) (NO DATA)
+- School age population, upper secondary education, both sexes (NO DATA)
+
+14. Background
+
+- Internet users (per 100 people) (USED) 
+- GDP per capita, PPP (current international $)
+
+
+///
+
+
+Indicators selection :
+
+- Population growth (annual %)
+***
+- Internet users (per 100 people)
+- Population, ages 15-64, total
+***
+-> Effective internet users = Population, ages 15-64, total * Internet users (per 100 people) / 100
+
+***
+- Enrolment in tertiary education, all programmes, both sexes (number) 
+- Enrolment in post-secondary non-tertiary education, both sexes (number) 
+- Enrolment in upper secondary education, both sexes (number) 
+***
+-> Total enrolment in education = Enrolment in tertiary education, all programmes, both sexes (number) 
+                                    + Enrolment in post-secondary non-tertiary education, both sexes (number) 
+                                    + Enrolment in upper secondary education, both sexes (number) 
+
+- Government expenditure on education as % of GDP (%) 
+- GDP per capita, PPP (current international $)
+
+
+///
+
+
+Missing data treatment :
+
+1 - Restreindre l'intervalle temporel aux colonnes les plus peuplées ou les plus pertinentes pour l'analyse
+
+2 - (Clean 1) 
+Eliminer les rangs peuplés exclusivement de valeurs NaN 
+
+3 - (Clean 2)
+Imputer par la moyenne de chaque rang les valeurs NaN restantes et ajouter une colonne "mean" en fonction des lignes du DataFrame
+OU
+Imputer par la dernière valeur non-NaN chacune des valeurs NaN restantes de chaque rang et ajouter une colonne "mean" en fonction des lignes du DataFrame
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
